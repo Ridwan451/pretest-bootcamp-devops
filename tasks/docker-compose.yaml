@@ -1,0 +1,36 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:14.2
+    environment:
+      - POSTGRES_PASSWORD
+      - POSTGRES_USER
+      - POSTGRES_DB
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  spring-boot:
+    image: dimmaryanto93/udemy-springboot-app:latest
+    environment:
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=${POSTGRES_DB}
+      - DATABASE_USER=${POSTGRES_USER}
+      - DATABASE_PASSWORD=${POSTGRES_PASSWORD}
+      - APPLICATION_PORT=8080
+    depends_on:
+      - postgres
+
+  angular:
+    image: dimmaryanto93/udemy-angular-app:latest
+    environment:
+      - APPLICATION_PORT=80
+      - NGINX_ROOT_DOCUMENT=/var/www/html
+      - BACKEND_HOST=spring-boot
+      - BACKEND_PORT=8080
+      - BACKEND_CONTEXT_PATH=/
+    depends_on:
+      - spring-boot
+
+volumes:
+  pg_data:
