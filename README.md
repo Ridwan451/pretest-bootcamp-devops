@@ -48,3 +48,8 @@ Silahkan buat docker-compose filenya, kemudian simpan dalam folder `tasks` denga
 2. Kenapa Orchestration Container System seperti Kubernetes sangat popular (menurut anda)?
 
 Cara pengerjaan, silahkan update file ini tulis jawabanya di bawah ini
+
+### Jawaban
+
+1. Orchestration Container System adalah sebuah sistem yang membantu mengatur dan mengelola banyak container yang berjalan di server. Container ini berisi aplikasi atau bagian dari aplikasi. Sistem ini berguna untuk menyederhanakan proses pengaturan, penjadwalan, dan pemantauan container-container ini. Dengan menggunakan sistem ini, kita dapat menyebarkan aplikasi dengan mudah, mengetahui kapan container-container tersebut bermasalah, dan meningkatkan kemampuan aplikasi kita untuk menangani lebih banyak pengguna.
+2. Kubernetes sangat populer karena kemampuannya untuk mengatur dan mengelola banyak container aplikasi. Ini membantu orang-orang dengan mudah menyebarkan, memantau, dan memperluas aplikasi mereka. Kubernetes dapat mengatur container di banyak komputer atau server sehingga aplikasi tetap berjalan dengan baik. Hal ini membuat pengelolaan aplikasi yang kompleks menjadi lebih mudah dan efisien. Kubernetes juga mendukung berbagai macam platform, termasuk public cloud dan data center lokal, sehingga kita dapat menggunakan kubernetes di manapun aplikasi kita berjalan. Fitur-fiturnya bagus dan komunitasnya juga aktif, Kubernetes jadi pilihan populer bagi para developer dan organisasi dalam mengelola aplikasi mereka.
